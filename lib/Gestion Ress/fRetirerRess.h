@@ -1,3 +1,4 @@
 #include "ShareThings.h"
+#include "fRetirerRess.h"
 
-int supprRessempr(TtesRessources, Ressource *);
+int retirerRessource(TtesRessources, Ressource *, Personne *);

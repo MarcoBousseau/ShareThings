@@ -1,31 +1,10 @@
-#include "fRetirerRess.h"
+#include "fSupprRess.h"
 #include "ShareThings.h"
+#include "fRetirerRess.h"
 
-int supprRessempr(TtesRessources tr, Ressource *res) {         //supprimer une ressource de la liste des ressources quand le propriétaire la retire
-    Ressource *resactuelle = tr->head;
-    while (((resactuelle->Nom != res->Nom) || (resactuelle->type != res->type)) && ((resactuelle != tr->tail))) {
-        resactuelle = resactuelle->suivant
+int retirerRessource(TtesRessources tr, Ressource *r, Personne *pers){        //pers désigne la personne connectée
+    Personne proprio = r->proprietaire;
+    if (r->disponible /*== 1*/) && (proprio->identifiant == pers->identifiant) {
+        supprRessempr(tr, r);
     }
-    
-    if ((tr->head == NULL) || (resactuelle == tr->tail)) {
-        if ((resactuelle->Nom == res->Nom) && (resactuelle->type == res->type)) {
-            Ressource *r = tr->tail;
-            tr->tail = (tr->tail)->precedent;
-            free(r);
-            tr->size--;
-            return 0;
-        }
-        else {
-            return 1;                                               //La ressource à supprimer n'existe pas.
-        }
-    }
-    
-    else {
-        (resactuelle->precedent)->suivant = resactuelle->suivant;
-        free(resactuelle);
-        tr->size--;
-    }
-    
-    return 0;
 }
-
