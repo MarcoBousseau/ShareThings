@@ -1,5 +1,3 @@
-#include <pwd.h>
-#include <unistd.h>
 #include "ShareThings.h"
 #include "fMenuAdmin.h"
 

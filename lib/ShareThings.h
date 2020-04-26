@@ -10,6 +10,40 @@
 
 #include <stdio.h>
 
+typedef struct Date {
+    int jour;
+    int mois;
+    int annee;
+}Date;
+
+typedef struct Ressource {
+    enum { LIVRE=0, PC=1, OUTILS=2, CAPTEURS=3, AUTRE=4 }type;
+    int disponible;
+    struct Personne *emprunteur;
+    struct Personne *proprietaire;
+}Ressource;
+
+typedef struct Personne {
+    char *Nom[30];
+    char *Prenom[30];
+    char *identifiant[30];
+    char *mdp[15];
+    struct Ressource *emprunts[30];
+    struct Ressource *prets[30];
+}Personne;
+
+typedef struct s_clients {
+    Personne *head;
+    Personne *tail;
+    int size;
+} ListeClients;
+
+
+typedef struct s_ttesRess {
+    Personne *head;
+    Personne *tail;
+    int size;
+} TtesRessources;
 /*
 typedef struct Ressource;
 
