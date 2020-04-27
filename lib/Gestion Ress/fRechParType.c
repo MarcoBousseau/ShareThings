@@ -3,6 +3,7 @@
 
 int rechercheParType(TtesRessources tr, int typerech) {
     if (tr->head == NULL) {
+        printf("Aucune ressource de ce type a afficher.");
         return 1;                           //Aucune ressource à afficher.
     }
     

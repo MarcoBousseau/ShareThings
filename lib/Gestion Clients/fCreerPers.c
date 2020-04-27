@@ -15,6 +15,11 @@ Personne creerPersonne(){
 
     printf("Saisir le Mot de passe (15 caracteres maximum):");
     scanf("%s",&(p1->mdp));
-
+    
+    p1->emprunts = NULL;
+    p1->prets = NULL;
+    p1->precedent = NULL;
+    p1->suivant = NULL;
+    
     return p1;
 }

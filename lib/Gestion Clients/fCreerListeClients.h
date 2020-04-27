@@ -1,1 +1,3 @@
-void creerListe();
+#include "ShareThings.h"
+
+ListeClients creerListe();

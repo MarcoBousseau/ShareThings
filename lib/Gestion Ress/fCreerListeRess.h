@@ -1,1 +1,3 @@
-void creerTtesRess();
+#include "ShareThings.h"
+
+TtesRessources creerTtesRess();
