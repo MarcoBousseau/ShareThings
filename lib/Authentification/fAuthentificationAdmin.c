@@ -1,3 +1,5 @@
+#include "Authentification/hAuthent.h"
+#include "fHashCode.h"
 #include <stdio.h>
 #include "fAuthentificationAdmin.h"
 
@@ -11,7 +13,7 @@ int authentificationAdmin(char mdpAdmin[]){
     i=0;
     //while(i<15){
     printf("\t\tAuthentification\n\n\t\tmdp (en entrant à chaque caractère) : %s", entree);
-    scanf("%s", &entree);
+    scanf("%s", /*&*/entree);
     //        entree[i] = c;
     i++;
     //}

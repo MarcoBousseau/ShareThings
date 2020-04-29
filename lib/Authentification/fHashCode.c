@@ -1,5 +1,7 @@
+#include "Authentification/hAuthent.h"
 #include <pwd.h>
 #include <unistd.h>
+#include <string.h>
 #include "fHashCode.h"
 
 unsigned int HashCode (char  *ligne)

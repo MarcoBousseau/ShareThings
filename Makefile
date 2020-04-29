@@ -1,8 +1,8 @@
 LIB= $(wildcard lib/*)
 INCLUDE_PATH=lib/
 
-cli: libraries
-	gcc main.c $(wildcard libraries/*) -I$(INCLUDE_PATH) -o cli
+cli_exec: libraries
+	gcc cli/main.c $(wildcard libraries/*) -I$(INCLUDE_PATH) -o cli_exec
 
 libraries:
 	mkdir libraries/
@@ -13,4 +13,4 @@ libraries:
 		cd -; \
 	done
 clean: 
-	rm -rf libraries/ cli
+	rm -rf libraries/ cli_exec 

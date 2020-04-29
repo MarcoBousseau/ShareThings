@@ -1,8 +1,9 @@
 #include "fAuthentificationClient.h"
-#include "ShareThings.h"
+#include "Authentification/hAuthent.h"
+#include "fHashCode.h"
 #include <stdio.h>
 
-int authentificationClient(){
+int authentificationClient(ListeClients mainLC){
     char entreeId[15];
     char entreeMdp[15];
     int res = 0;
@@ -32,7 +33,7 @@ int authentificationClient(){
             //traitement du mot de passe
             printf("mdp : ");
             scanf("%s", entreeMdp);
-            switch(HashCode(actuel->mdp) == HashCode(entreemdp)){
+            switch(HashCode(actuel->mdp) == HashCode(entreeMdp)){
                 case 1:
                     return 1;
                 case 0:
