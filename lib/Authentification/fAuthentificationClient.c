@@ -11,7 +11,7 @@ int authentificationClient(ListeClients mainLC){
     res = scanf("%s", entreeId);
     int i;
     int compt = 0;
-    Personne actuel = mainLC->head;         //lc correspond à la liste des clients.
+    Personne * actuel = mainLC->head;         //lc correspond à la liste des clients.
     if (res == 1) {
         while ((actuel != NULL) && (compt != 30)) {
             for (i=0; i <= 29; i++) {

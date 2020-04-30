@@ -2,7 +2,7 @@
 #include "GestionClients/hGestCli.h"
 #include <stdio.h>
 
-int ajouterPersonne(ListeClients lc, Personne *p1) {
+int ajouterPersonne(ListeClients lc, Personne * p1) {
     p1 = (Personne *)malloc(sizeof(Personne));
     
     if (lc->size == 0) {

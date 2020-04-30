@@ -1,5 +1,5 @@
 #include "fSaveClient.h"
-#include "ShareThings.h"
+#include "GestionSauvegarde/hGestSave.h"
 
 int saveClients(ListeClients lc, char* mdpAdmin) {              //sauvegarde les clients dans un fichier
     

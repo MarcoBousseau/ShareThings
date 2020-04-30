@@ -1,9 +1,9 @@
 #include "fRecupClient.h"
-#include "ShareThings.h"
+#include "GestionSauvegarde/hGestSave.h"
 
 int recupClients(ListeClients lc, char * mdpAdmin) {             //recupere les clients du fichier sauvegarde.
     FILE* fichier = NULL;
-    
+    char chaine[35] = "";
     fichier = fopen("clients.txt", "r");        //on ouvre le fichier en question.
     
     if (fichier == NULL) {
@@ -184,4 +184,4 @@ int recupClients(ListeClients lc, char * mdpAdmin) {             //recupere les 
                }
                return 0;
                }
-
+               

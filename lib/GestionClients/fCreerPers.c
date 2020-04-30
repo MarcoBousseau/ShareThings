@@ -2,7 +2,7 @@
 #include "GestionClients/hGestCli.h"
 
 Personne creerPersonne(){
-    p1 = (Personne *)malloc(sizeof(Personne));
+    Personne * p1 = (Personne *)malloc(sizeof(Personne));
     
     printf("Saisir le Nom (15 caracteres maximum):");
     scanf("%s",&(p1->Nom));

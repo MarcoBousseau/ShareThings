@@ -1,12 +1,12 @@
 //
-//  ShareThings.h
-//  
+//  hGestSave.h
+//
 //
 //  Created by Marco Bousseau on 10/03/2020.
 //
 
-#ifndef ShareThings_h
-#define ShareThings_h
+#ifndef hGestSave_h
+#define hGestSave_h
 
 #include <stdio.h>
 
@@ -20,5 +20,4 @@ typedef struct s_clients *ListeClients;
 
 typedef struct s_ttesRess *TtesRessources;
 
-
-#endif /* ShareThings_h */
+#endif /* hGestSave.h */

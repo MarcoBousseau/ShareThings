@@ -1,7 +1,8 @@
 #include "GestionClients/hGestCli.h"
+#include "GestionClients/fAfficheListeClients.h"
 
 int afficheListeClients(ListeClients lc) {
-    Personne *clientactuel = lc->head;
+    Personne * clientactuel = lc->head;
     char n;
     char p;
     if (lc->head == NULL) {

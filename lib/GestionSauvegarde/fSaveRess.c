@@ -1,5 +1,45 @@
 #include "fSaveRess.h"
-#include "ShareThings.h"
+#include "GestionSauvegarde/hGestSave.h"
+
+struct _date {
+    int jour;
+    int mois;
+    int annee;
+};
+
+struct _ressource {
+    /*typedef*/enum { LIVRE=0, PC=1, OUTILS=2, CAPTEURS=3, AUTRE=4 }type;
+    int disponible;
+    char Nom[30];
+    char idemprunteur[30];
+    char idproprietaire[30];
+    Date debut;
+    Ressource precedent;
+    Ressource suivant;
+};
+
+struct _personne {
+    char Nom[30];
+    char Prenom[30];
+    char identifiant[30];
+    char mdp[30];
+    Ressource emprunts[30];
+    Ressource prets[30];
+    Personne precedent;
+    Personne suivant;
+};
+
+struct s_clients {
+    Personne *head;
+    Personne *tail;
+    int size;
+};
+
+struct s_ttesRess {
+    Personne *head;
+    Personne *tail;
+    int size;
+};
 
 int saveRessources(TtesRessources tr) {     //sert a sauvegarder la liste des ressources.
     FILE* fichier = NULL;

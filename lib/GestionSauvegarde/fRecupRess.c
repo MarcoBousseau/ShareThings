@@ -1,9 +1,9 @@
 #include "fRecupRess.h"
-#include "ShareThings.h"
+#include "GestionSauvegarde/hGestSave.h"
 
 int recupRessources(TtesRessources tr) {            //on recupere le fichier sauvegarde de l'ensemble des ressources.
     FILE* fichier = NULL;
-    
+    char chaine[35] = "";
     fichier = fopen("ressources.txt", "r");     //on ouvre le fichier en question.
     
     if (fichier == NULL) {              //on verifie si il a ete ouvert avec succes.
